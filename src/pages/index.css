@@ -2,3 +2,8 @@
   position: absolute;
   z-index: 1;
 }
+
+.repeatBg {
+  background-image: url(../images/featureBg.png);
+  background-repeat: repeat;
+}

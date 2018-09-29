@@ -7,6 +7,7 @@ import './index.css'
 
 const IndexPage = ({ data }) => (
   <Layout>
+    {/* Hero */}
     <div className="container" >
       <div className="content">
         <div className="row pt-5">
@@ -21,13 +22,15 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
     </div>
-    <Img className="heroBg" fluid={data.file.childImageSharp.fluid} />
+    <Img fluid={data.image1.childImageSharp.fluid} />
     {/* Featured Section */}
-    <div className="container">
-      <div className="row">
-        <h1 id="featured">Featured Section</h1>
+    <section className="repeatBg">
+      <div className="container">
+        <div className="row pt-5 pb-5">
+          <h1>hello</h1>
+        </div>
       </div>
-    </div>
+    </section>
     {/* Addtional Projects Section */}
     <div className="container">
       <div className="row">
@@ -49,18 +52,34 @@ const IndexPage = ({ data }) => (
   </Layout >
 )
 
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "heroIMG.jpeg" }) {
+export const heroImg = graphql`
+fragment bgImg on File  {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
+}
+`
+export const repeatBg = graphql`
+fragment repeatBg on File  {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed_noBase64
+        }
+      }
+}
+`
+
+export const query = graphql`
+  query {
+    image1:file(relativePath: { eq: "heroIMG.jpeg" }) {
+      ...bgImg
+    }
+
+    image2:file(relativePath: { eq: "featureBg.png" }) {
+      ...repeatBg
     }
   }
 `
-
 export default IndexPage
