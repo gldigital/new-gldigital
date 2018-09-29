@@ -3,7 +3,18 @@
   z-index: 1;
 }
 
+.aboutWrapper{
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+}
+
 .repeatBg {
   background-image: url(../images/featureBg.png);
   background-repeat: repeat;
+}
+.connectBG {
+  background: rgba(28, 28, 28, 0.5);
+  margin-top: 40px;
+  padding: 30px 10px;
 }
