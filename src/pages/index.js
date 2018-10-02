@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout'
 import './index.css'
-
+const element = <FontAwesomeIcon icon={faCoffee} />
 const IndexPage = ({ data }) => (
   <Layout>
     {/* 
@@ -18,6 +20,7 @@ const IndexPage = ({ data }) => (
           <h1 className="h1 display-2">No Pain No Gain</h1>
         </div>
         <div className="row pt-4 pb-4">
+          <FontAwesomeIcon icon="twitter" />
           <p className="lead">
             The digital world can be a pain. Lucky for you, I specialize in
             eliminating pain points in the digital space! Whether it's web
@@ -46,7 +49,7 @@ const IndexPage = ({ data }) => (
       Featured Section 
       =============
     */}
-    <section className="repeatBg">
+    <section className="featured">
       <div className="container  pt-3 pb-3">
         {/* urbit */}
         <div className="row pt-5 pb-5">
@@ -110,11 +113,47 @@ const IndexPage = ({ data }) => (
       Additional Projects Section 
       =============
     */}
-    <div className="container">
-      <div className="row">
-        <h1 id="additional">Additional Section</h1>
+    <section id="addtionalProjects">
+      <div className="container">
+        <div className="row pt-5 pb-5 text-center">
+          <div className="col-md-4 p-3">
+            <Img className="rounded-circle mb-3" fluid={data.boygirl.childImageSharp.fluid} />
+            <h3>Baby Reveal</h3>
+            <p>Check out this program I built for our baby reveal. Built for all device types</p>
+            <span></span>
+            <span className="icon">{element}</span>
+            <span className="icon">{element}</span>
+            <span className="icon">{element}</span>
+            <button type="button" className="btn btn-dark mr-3 btn-lg">
+              Boy or Girl?
+            </button>
+          </div>
+          <div className="col-md-4 p-3">
+            <Img className="rounded-circle mb-3" fluid={data.oprah.childImageSharp.fluid} />
+            <h3>When Oprah Retires</h3>
+            <p>One day Oprah will retire and when she does we will need a superhero to give us cars and solve our problems. Find your superhero today!</p>
+            <span className="icon">{element}</span>
+            <span className="icon">{element}</span>
+            <span className="icon">{element}</span>
+            <button type="button" className="btn btn-dark mr-3 btn-lg">
+              Find my Superhero
+            </button>
+          </div>
+          <div className="col-md-4 p-3">
+            <Img className="rounded-circle mb-3" fluid={data.crystalGame.childImageSharp.fluid} />
+            <h3>Crystal Game</h3>
+            <p>Have fun playing my Crystal game all while you sharpen your memory!</p>
+            <span className="icon">{element}</span>
+            <span className="icon">{element}</span>
+            <span className="icon">{element}</span>
+            <button type="button" className="btn btn-dark mr-3 btn-lg">
+              Play Game?
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
     {/* 
       =============
       About Section 
@@ -158,7 +197,7 @@ const IndexPage = ({ data }) => (
       <div className="aboutWrapper connectBG ">
         <div className="row ">
           <div className="col-sm-12 text-center">
-              <h2 className="display-4 text-white">Let's Connects</h2>
+            <h2 className="display-4 text-white">Let's Connects</h2>
           </div>
         </div>
       </div>
@@ -194,6 +233,15 @@ export const featuredImg = graphql`
     }
   }
 `
+export const threeUp = graphql`
+  fragment threeUp on File {
+    childImageSharp {
+      fluid(maxWidth: 300, maxHeight: 200) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+`
 export const aboutImg = graphql`
   fragment aboutImg on File {
     childImageSharp {
@@ -223,6 +271,15 @@ export const query = graphql`
     }
     connectImg: file(relativePath: { eq: "connectBg.jpg" }) {
       ...connectImg
+    }
+    boygirl: file(relativePath: { eq: "boygirl.jpg" }) {
+      ...threeUp
+    }
+    oprah: file(relativePath: { eq: "oprah.jpg" }) {
+      ...threeUp
+    }
+    crystalGame: file(relativePath: { eq: "crystal2.png" }) {
+      ...threeUp
     }
   }
 `

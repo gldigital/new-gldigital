@@ -9,8 +9,12 @@
   width: 80%;
 }
 
-.repeatBg {
+.featured {
   background-image: url(../images/featureBg.png);
+  background-repeat: repeat;
+}
+#addtionalProjects {
+  background-image: url(../images/home3.jpg);
   background-repeat: repeat;
 }
 .connectBG {
