@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
 import Header from './header'
 import './layout.css'
+import Icon from './Icon/Icon'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
+AOS.init();
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
