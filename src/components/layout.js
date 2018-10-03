@@ -6,8 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './header'
 import './layout.css'
 import './Icon/Icon'
-import AOS from 'aos';
-import 'aos/dist/aos.css'
+import './Animation/Animation'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -39,7 +38,6 @@ const Layout = ({ children }) => (
     )}
   />
 )
-AOS.init();
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
