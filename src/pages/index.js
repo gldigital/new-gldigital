@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => (
     */}
     <div className="container">
       <div className="content">
-        <div className="row pt-5" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600">
+        <div className="row pt-5" >
           <h1 className="h1 display-2">No Pain No Gain</h1>
         </div>
         <div className="row pt-4 pb-4">
@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
             design or app developemnt, I have your back.
           </p>
         </div>
-        <div className="row pt-4 pb-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600">
+        <div className="row pt-4 pb-4" >
           <Link to="#featured">
             {' '}
             <button type="button" className="btn btn-outline-dark mr-3 btn-lg">
@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => (
       =============
     */}
     <section className="featured">
-      <div className="container  pt-3 pb-3" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600">
+      <div className="container  pt-3 pb-3" >
         {/* urbit */}
         <div className="row pt-5 pb-5">
           <div className="col-sm-6 text-white">
@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => (
           </div>
         </div>
         {/* Doguments */}
-        <div className="row pt-5 pb-5" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600">
+        <div className="row pt-5 pb-5" >
           <div className="col-sm-6">
             <Img fluid={data.doguments.childImageSharp.fluid} />
           </div>
@@ -87,7 +87,7 @@ const IndexPage = ({ data }) => (
           </div>
         </div>
         {/* What to Weather */}
-        <div className="row pt-5 pb-5" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600">
+        <div className="row pt-5 pb-5" >
           <div className="col-sm-6 text-white">
             <h2 className="">What To Weather</h2>
             <p>
@@ -113,12 +113,12 @@ const IndexPage = ({ data }) => (
     */}
     <section id="addtionalProjects">
       <div className="container">
-        <div className="row pt-5 pb-5 text-center" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600">
+        <div className="row pt-5 pb-5 text-center" >
           <div className="col-md-4 p-3">
             <Img className="rounded-circle mb-3" fluid={data.boygirl.childImageSharp.fluid} />
             <h3>Baby Reveal</h3>
             <p>Check out this program I built for our baby reveal. Built for all device types</p>
-            <div className="icons">
+            <div className="icons pt-4 pb-4">
               <FontAwesomeIcon className='icon' icon={['fab', 'html5']} size="3x" />
               <FontAwesomeIcon className='icon' icon={['fab', 'css3']} size="3x" />
               <FontAwesomeIcon className='icon' icon={['fab', 'js']} size="3x" />
@@ -133,7 +133,7 @@ const IndexPage = ({ data }) => (
             <Img className="rounded-circle mb-3" fluid={data.oprah.childImageSharp.fluid} />
             <h3>When Oprah Retires</h3>
             <p>One day Oprah will retire and when she does we will need a superhero to give us cars and solve our problems. Find your superhero today!</p>
-            <div className="icons">
+            <div className="icons pt-4 pb-4">
               <FontAwesomeIcon className='icon' icon={['fab', 'html5']} size="3x" />
               <FontAwesomeIcon className='icon' icon={['fab', 'css3']} size="3x" />
               <FontAwesomeIcon className='icon' icon={['fab', 'js']} size="3x" />
@@ -148,7 +148,7 @@ const IndexPage = ({ data }) => (
             <Img className="rounded-circle mb-3" fluid={data.crystalGame.childImageSharp.fluid} />
             <h3>Crystal Game</h3>
             <p>Have fun playing my Crystal game all while you sharpen your memory!</p>
-            <div className="icons">
+            <div className="icons pt-4 pb-4">
               <FontAwesomeIcon className='icon' icon={['fab', 'html5']} size="3x" />
               <FontAwesomeIcon className='icon' icon={['fab', 'css3']} size="3x" />
               <FontAwesomeIcon className='icon' icon={['fab', 'js']} size="3x" />
@@ -169,7 +169,7 @@ const IndexPage = ({ data }) => (
       =============
     */}
     <div className="container">
-      <div className="row pt-3 pb-3" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600">
+      <div className="row pt-3 pb-3" >
         <div className="col-md-6">
           <h2 className="display-3">About Greg</h2>
           <p>
@@ -204,7 +204,7 @@ const IndexPage = ({ data }) => (
     */}
     <div className="container d-flex justify-content-center">
       <div className="aboutWrapper connectBG ">
-        <div className="row " data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600">
+        <div className="row " >
           <div className="col-sm-12 text-center">
             <h2 className="display-4 text-white">Let's Connects</h2>
             <div className="icons text-white">

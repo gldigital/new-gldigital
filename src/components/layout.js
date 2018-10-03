@@ -6,9 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './header'
 import './layout.css'
 import './Icon/Icon'
-import './Animation/Animation'
 
 const Layout = ({ children }) => (
+
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -19,6 +19,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
+
     render={data => (
       <>
         <Helmet
@@ -38,8 +39,8 @@ const Layout = ({ children }) => (
     )}
   />
 )
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-
 export default Layout
